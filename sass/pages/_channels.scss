@@ -1,0 +1,577 @@
+/**
+ *File concerning the channel pages
+ **/
+
+body.planning-landing,
+body.photos-landing,
+body.dresses-landing,
+body.registry-landing,
+body.sweepstakes-landing,
+body.beauty-health-landing {
+	.bx-wrapper {
+		.bx-controls {
+			z-index: 10;
+			.bx-pager {
+				position: absolute;
+				top: 20px;
+				right: 0px;
+				width: 22px;
+				bottom: auto;
+				.bx-pager-item {
+					display: block;
+					margin:  0 0 5px 0;
+				}
+			}
+			.bx-prev {
+				background: url('../images/sprites/gown-nav.png') no-repeat 0 0;
+				width: 35px;
+				height: 74px;
+			}
+			.bx-next {
+				background: url('../images/sprites/gown-nav.png') no-repeat -35px 0px;
+				width: 35px;
+				height: 74px;
+			}
+		}
+	}
+	.channel-most-recent {
+		@include article-listing;
+	}
+}
+
+body.honeymoons-landing {
+	.bx-wrapper {
+		margin: 0 0 10px 0;
+		.bx-viewport {
+			.slide {
+				.views-field-title {
+					@include shaded-title;
+					bottom: 0px;
+					padding: 5px 0 10px 0;
+					span {
+							text-shadow: 0 2px 5px rgba(0,0,0,.75);
+						a {
+							font-size: 36px;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+		.bx-controls {
+			position: relative;
+			z-index: 10;
+			height: 31px;
+			.bx-controls-direction {
+				position: relative;
+				bottom: -5px;
+				border-top: 3px solid #000;
+				a {
+					width: 25px;
+					height: 25px;
+					top: auto;
+					margin-top: 0;
+				}
+				.bx-prev {
+					background: url('../images/slider-nav-sprite.png') no-repeat 0 0;
+					left: 0px;
+				}
+				.bx-next {
+					background: url('../images/slider-nav-sprite.png') no-repeat -29px 0;
+					left: 30px;		
+				}
+			}
+		}	
+	}
+	#honeymoons-editors-pick {
+		.pane-title {
+			background: none;
+			border-bottom: none;
+			margin: 0;
+			background: url("../images/sub-hr.jpg") repeat-x center;
+			span {
+				background: #FFF;
+				padding: 10px;
+				font-family: $open-sans-italic;
+				font-style: italic;
+				font-weight: bold;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	body.channel {
+		.channel-most-recent {
+			.views-row {
+				padding: 10px 0 0 0;
+				margin: 0;
+			}
+			.list-image {
+				margin: 0;
+				display: block;
+				width: 100%;
+				.item-list {
+					margin: 0 auto;
+				}
+			}
+			.info {
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: $h5-font-size;
+				.title {
+					font-size: $h3-font-size;
+					margin: 10px 0 0 0;
+				}
+				.data {
+					position: relative;
+					bottom: auto;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+@media all and (min-width: 481px) and (max-width: 1023px) {
+	body.channel {
+		.channel-most-recent {
+			.mr-image {
+			}
+			.mr-info {
+				.mr-title {
+				}
+			}
+		}
+	}
+}
+
+@media all and (min-width: 1024px) and (max-width: 1170px) {
+	body.channel {
+		.channel-most-recent {
+			.mr-image {
+			}
+			.mr-info {
+			}
+		}
+	}
+}
+
+/*
+ *Vendor search (Yellow Pages)
+ */
+body.page-vendors {
+	#yp-search-header {
+		background:#ccc center/cover url('../images/vendors-bg.png') no-repeat;
+		max-width:1170px;
+    height:400px;
+    margin: 10px auto 45px auto;
+		position: relative;
+		.container {
+			height: 100%;
+			padding: 0 0 30px 0;
+			border-bottom: 1px solid #000;
+			.yp-title {
+				font: 600 51px $open-sans;
+				text-align: center;
+				margin: 0;
+				padding: 20px 0 0;
+			}
+			.yp-subtitle {
+				font: italic 600 30px $open-sans;
+				text-align:center;
+				margin:0;
+			}
+			.yp-form-holder {
+				max-width: 824px;
+				height: 100px;
+				margin: 5% auto;
+				background: rgba(255,255,255,.5);
+				box-shadow: 0 0 8px rgba(0,0,0,.35);
+				@include border-radius(10px);
+				@include box-sizing(border-box);	
+			}
+		}
+		.attribution {
+			position: absolute;
+			right: 5px;
+			bottom: -35px;
+		}
+	}
+}
+//Pulled out so styles are applied to form wherever it shows.
+#yp-search-form {
+	font: normal 300 20px $open-sans;
+	max-width:720px;
+	margin: 0 auto;
+	position: relative;
+	top: 30%;
+	@include box-sizing(border-box);
+	.form-type-textfield {
+		margin: 0 3% 0 0;
+		display: inline-block;
+		vertical-align: top;
+		width: 36%;
+	}
+	input[type="text"] {
+		font: normal 400 20px $open-sans;
+		border: 1px solid #8a8a8a;
+		padding: 5px;
+		outline: none !important;
+		@include box-sizing(border-box);
+		width: 100%;
+	}
+	::-webkit-input-placeholder {
+		color: black;
+	}
+	:-moz-placeholder { 
+		color: black;
+	}
+	::-moz-placeholder {
+		color: black; 
+	}
+
+	:-ms-input-placeholder {  
+		color: black;
+	}
+	input[type="submit"]{
+		font: normal 600 20px $open-sans;
+		color: #FFF;
+		background: #00ced1; //tiff-blue
+		border: 1px solid #8a8a8a;
+		padding: 5px;
+		display: inline-block;
+		vertical-align: top;
+		@include box-sizing(border-box);
+	}
+}
+
+@media all and (max-width: 767px) {
+	body.page-vendors {
+		#yp-search-header {
+			.container {
+				height: auto;
+				border-bottom: none;
+				.yp-title {
+					font: 600 36px $open-sans;
+				}
+				.yp-subtitle {
+					font: italic 600 20px $open-sans;
+				}
+				.yp-form-holder {
+					height: auto;
+					width: 98%;
+					#yp-search-form {
+						top: 40%;
+						text-align: center;
+						padding: 10px 0;
+						.form-type-textfield {
+							display: block;
+							width: 90%;
+							margin: 20px auto;
+						}
+						input[type="submit"]{
+							display: block;
+							margin: 20px auto;
+							width: 90%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 320px) {
+	body.page-vendors {
+		#yp-search-header {
+			height: auto;
+			.container {
+				.yp-title {
+					font: 600 24px $open-sans;
+				}
+				.yp-subtitle {
+					font: italic 600 14px $open-sans;
+				}
+				.yp-form-holder {
+					height: auto;
+					#yp-search-form {
+						top: 40%;
+						text-align: center;
+						padding: 10px 0;
+						.form-type-textfield {
+							display: block;
+							width: 90%;
+							margin: 20px auto;
+						}
+						input[type="submit"]{
+							display: block;
+							margin: 20px auto;
+							width: 90%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Results page */
+body.page-vendors-results {
+	#yp-form {
+		padding:  20px 0;
+		background-color: $gray-background;
+	}
+	.attribution {
+		background: url("../images/titlebg.png") repeat-x bottom left;
+		text-align: right;
+		padding: 10px 0 8px 0;
+	}
+	#yp-results {
+		li {
+			text-align: left;
+			.info {
+				a {
+					color: $darkturquoise;
+					font-family: $open-sans;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.title {
+					margin: 0 0 10px 0;
+					a {
+						font-size: 24px;
+					}
+				}
+				.slogan {
+					margin:  0 0 10px 0;
+				}
+				.address {
+					background: url("../images/address.png") no-repeat left 2px;;
+					text-indent: 25px;
+					margin: 0 0 5px 0;
+				}
+				.phone {
+					background: url("../images/phone.png") no-repeat left 2px;;
+					text-indent: 25px;
+					margin: 0 0 5px 0;
+				}
+				.site {
+					background: url("../images/web.png") no-repeat left 2px;;
+					text-indent: 25px;
+					margin: 0 0 5px 0;
+				}
+				.video {
+					background: url("../images/video.png") no-repeat left 2px;;
+					text-indent: 25px;
+					margin: 0 0 5px 0;
+				}
+			}
+		}
+		#sponsored {
+			padding: 20px;
+			text-align: center;
+			background-color: $gray-background;
+			margin: 0 0 20px 0;
+			li {
+				display: inline-block;
+				vertical-align: top;
+				width: 32%;
+			}
+			li.first {
+				margin: 0 2% 0 0;
+			}
+			li.middle {
+				margin: 0; 
+			}
+			li.last {
+				margin: 0 0 0 2%;
+			}
+		}
+		#organic {
+			li {
+				padding: 10px 0;
+				border-bottom: 1px dotted $gray-text;
+			}
+		}
+	}
+}
+
+/* Details page */
+body.page-vendors-details {
+	#yp-form {
+		padding:  20px 0;
+		background-color: $gray-background;
+	}
+	.attribution {
+		background: url("../images/titlebg.png") repeat-x bottom left;
+		text-align: right;
+		padding: 10px 0 8px 0;
+	}
+	#yp-detailed {
+		margin: 20px 0 0 0;
+		#details {
+			position: relative;
+			padding: 20px;
+			background-color: $gray-background;
+			#top {
+				position: relative;
+				margin: 0 0 10px 0;
+				min-height: 80px;
+				.info {
+					display: inline-block;
+					vertical-align: top;
+					min-width: 55%;
+					.title {
+						h1 {
+							font-family: $open-sans;
+							font-size: 22px;
+							color: $darkturquoise;
+							margin: 0 0 5px 0;
+						}
+					}
+					.address {
+						background: url("../images/address.png") no-repeat left 2px;;
+						text-indent: 25px;
+						display: inline-block;
+						vertical-align: top;
+						margin: 0 25px 0 0;
+					}
+					.phone {
+						background: url("../images/phone.png") no-repeat left 2px;;
+						text-indent: 25px;
+						display: inline-block;
+						vertical-align: top;
+						margin: 0 25px 0 0;
+						a {
+							color: $darkturquoise;
+						}
+					}
+					.site {
+						background: url("../images/web.png") no-repeat left 2px;;
+						text-indent: 25px;
+						display: inline-block;
+						vertical-align: top;
+						a {
+							color: $darkturquoise;
+						}
+					}
+				}
+				#biz-img {
+					display: inline-block;
+					vertical-align: top;
+					min-width: 44%;
+					text-align: right;
+					max-width: 300px;
+					img {
+						border: 2px solid $gray-text;
+					}
+				}
+				.general-info {
+					p {
+						margin: 10px 0;
+					}
+				}
+			}
+		}
+		#yp-business-details {
+			border-bottom: 1px dotted $gray-text;
+			padding: 10px 0;
+			position: relative;
+			.info {
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+				h4 {
+					margin: 0 10px 0 0;
+				}
+			}
+			.rating-block {
+				display: inline-block;
+				vertical-align: top;
+				text-align: right;
+				width: 50%;
+			}
+		}		
+		.stars {
+			display: inline-block;
+			.stars-background {
+				width: 65px;
+				height: 13px;
+				background: url(/sites/all/themes/custom/bg_zen/images/yp-rating-sprite.png) 0 0;
+				.stars-foreground {
+					height: 13px;
+					background: url(/sites/all/themes/custom/bg_zen/images/yp-rating-sprite.png) 0 -13px;
+				}
+				.rating-count {
+					
+				}
+			}
+		}
+		#reviews {
+			font-family: $open-sans;
+			li {
+				padding: 20px 0;
+				.review-info {
+					margin: 0 0 10px 0;
+					.stars {
+						display: inline-block;
+						vertical-align: baseline;
+						margin: 0 20px 0 0;
+					}
+					.reviewer {
+						display: inline-block;
+						vertical-align: top;
+						margin: 0 20px 0 0;
+						font-weight: bold;
+					}
+					.date {
+						display: inline-block;
+						vertical-align: top;
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 767px) {
+	body.page-vendors-details,
+	body.page-vendors-results {
+		#yp-search-form {
+			.form-type-textfield {
+				display: block;
+				width: 90%;
+				margin: 20px auto;
+			}
+			input[type="submit"]{
+				display: block;
+				margin: 20px auto;
+				width: 90%;
+			}
+		}
+		#yp-results {
+			#sponsored {
+				margin: 0 0 5px 0;
+				padding: 5px;
+				li, li.first, li.last {
+					display: block;
+					width: 98%;
+					margin: 0 0 5px 0;
+					padding: 5px 0;
+					border-bottom: 1px dotted $gray-text;
+				}
+				li.last {
+					border-bottom: none;
+				}
+			}
+			#organic {
+				margin: 0 0 20px 0;
+			}
+		}
+	}
+}
+@media all and (max-width: 320px) {
+}
+

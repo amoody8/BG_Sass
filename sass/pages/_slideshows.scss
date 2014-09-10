@@ -1,0 +1,151 @@
+/**
+ *Styles for slideshows
+ **/
+body.node-type-slideshow {
+	.slideshow {
+		text-align: center;
+		.slideshow-body {
+			font-size: $h3-font-size;
+			font-weight: bold;
+			margin: 0 10px;
+			text-align: left;
+		}
+		.author {
+			margin: 10px 0 0 10px;
+			text-align: left;
+		}
+		.admin-edit {
+			display: inline-block;
+		}
+		@include article-share;
+		.data {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 0 0 20px;
+			.votes {
+				margin: 0;
+			}
+			.comments {
+				display: none;
+			}
+			.share {
+				margin: 0;
+			}
+		}
+		.slide-pagination {
+			text-align: center;
+			padding: 5px 0;
+			font-family: $arapey-regular;
+			font-size: $h2-font-size;
+			font-style: italic;
+		}
+	
+		#slides-frame {
+			width: 100%;
+			max-width: 600px;
+			margin: 0 auto;
+			display: inline-block;
+			#slides {
+				.slide-container {
+					.slide {
+						text-align: center;
+						.slide-image {
+							margin: 0 auto;
+						}
+					}
+					.caption {
+						display: none;
+					}
+				}
+			}
+		}
+		#slide-data {
+			display: inline-block;
+			width: 210px;
+			vertical-align: top;
+			text-align: left;
+			margin: 0 0 0 10px;
+			#nav {
+				z-index: 1;
+				height: 31px;
+				position: relative;
+				.bx-prev {
+					background: url('../images/ss-prev.png') no-repeat 0 0;
+					position: absolute;
+					text-indent: -99999px;
+					width: 61px;
+					height: 31px;
+					top:  0px;
+					left: 0px;
+				}
+				.bx-next {
+					background: url('../images/ss-next.png') no-repeat 0 0;
+					position: absolute;
+					text-indent: -99999px;
+					width: 61px;
+					height: 31px;
+					top:  0px;
+					right: 0px;
+				}
+			}
+			.side-caption {
+				position: relative;
+				top: -33px;
+				.node-title {
+					font-size: $h35-font-size;
+				}
+			}
+		}
+	}
+	p {
+		margin: 0;
+	}
+}
+
+@media all and (max-width: 400px) {
+		body.node-type-slideshow {
+			.slideshow {
+				.data {
+					margin: 0;
+				}
+				#slides {
+					.slide-container {
+						.caption {
+							.slide-pagination {
+								position: relative;
+								text-align: right;
+								top: -40px;
+								right: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+}
+
+@media all and (max-width: 1169px) {
+	body.node-type-slideshow {
+		.slideshow {
+			.slideshow-body {
+			}
+			#slides-frame {
+				display: block;
+			#slides {
+				.slide-container {
+					.caption {
+						display: block;
+						.slide-pagination {
+							float: right;
+						}
+					}
+				}
+			}
+			}
+			#slide-data {
+				display: none;
+			}
+		}	
+	}
+}	

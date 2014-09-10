@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/open-sans/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Regular-webfont.eot?iefix") format("eot"), url("../fonts/open-sans/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Regular-webfont.svg#webfontOkOndcij") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url("../fonts/open-sans/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Bold-webfont.eot?iefix") format("eot"), url("../fonts/open-sans/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Bold-webfont.svg#webfontOkOndcij") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: url("../fonts/open-sans/OpenSans-Italic-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Italic-webfont.eot?iefix") format("eot"), url("../fonts/open-sans/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Italic-webfont.svg#webfontOkOndcij") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ArapeyRegular';
+  src: url("../fonts/arapey-regular/arapey-regular.eot");
+  src: url("../fonts/arapey-regular/arapey-regular.eot?iefix") format("eot"), url("../fonts/arapey-regular/arapey-regular.woff") format("woff"), url("../fonts/arapey-regular/arapey-regular.ttf") format("truetype"), url("../fonts/arapey-regular/arapey-regular.svg#webfontOkOndcij") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArapeyItalic';
+  src: url("../fonts/arapey-regular/arapey-italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AleoLight';
+  src: url("../fonts/aleo-light/aleo-light.eot");
+  src: url("../fonts/aleo-light/aleo-light.eot?iefix") format("eot"), url("../fonts/aleo-light/aleo-light.woff") format("woff"), url("../fonts/aleo-light/aleo-light.ttf") format("truetype"), url("../fonts/aleo-light/aleo-light.svg#webfontOkOndcij") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+*/
+/* line 220, ../../sass/_init.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* line 223, ../../sass/_init.scss */
+a:hover {
+  color: #f49ac1;
+}
+
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/* line 27, ../../sass/layouts/bg_responsive.scss */
+#header {
+  text-align: center;
+}
+
+/* line 33, ../../sass/layouts/bg_responsive.scss */
+#main #content {
+  padding: 0 30px 0 0;
+  display: table-cell;
+  width: 100%;
+}
+
+@media all and (max-width: 480px) {
+  /* line 44, ../../sass/layouts/bg_responsive.scss */
+  #content-newsletter-form #form-fields .input-wrapper {
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* line 51, ../../sass/layouts/bg_responsive.scss */
+  .footer-container .mobile-links {
+    display: block;
+    width: 100%;
+  }
+  /* line 55, ../../sass/layouts/bg_responsive.scss */
+  .footer-container .footer-logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 59, ../../sass/layouts/bg_responsive.scss */
+  .footer-container .footer-logo p.copyright {
+    margin: 0 0 0 0;
+  }
+  /* line 63, ../../sass/layouts/bg_responsive.scss */
+  .footer-container .desktop-links {
+    display: none;
+  }
+  /* line 67, ../../sass/layouts/bg_responsive.scss */
+  .footer-container .footer-list .footer-title {
+    padding: 5px 0 0 0;
+  }
+  /* line 70, ../../sass/layouts/bg_responsive.scss */
+  .footer-container .footer-list ul.menu {
+    display: none;
+  }
+}
+@media all and (max-width: 1024px) {
+  /* line 84, ../../sass/layouts/bg_responsive.scss */
+  #main #content {
+    display: block;
+    padding: 0;
+  }
+  /* line 88, ../../sass/layouts/bg_responsive.scss */
+  #main .region-sidebar-second {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  /* line 93, ../../sass/layouts/bg_responsive.scss */
+  #main .region-sidebar-second div.block {
+    margin-right: 2%;
+  }
+
+  /* line 98, ../../sass/layouts/bg_responsive.scss */
+  .bx-controls-direction {
+    display: none;
+  }
+}
+@media all and (max-width: 1189px) {
+  /* line 110, ../../sass/layouts/bg_responsive.scss */
+  #page #main {
+    padding: 0 10px;
+  }
+}
+@media all and (min-width: 481px) {
+  /* line 119, ../../sass/layouts/bg_responsive.scss */
+  #page-title h1.page__title, .page-title h1.page__title {
+    background: url("../images/titlebg.png") repeat-x center;
+    font-size: 28px;
+    margin: 10px auto;
+    border: none;
+  }
+  /* line 124, ../../sass/layouts/bg_responsive.scss */
+  #page-title h1.page__title span, .page-title h1.page__title span {
+    background: #FFF;
+    padding: 10px;
+  }
+}

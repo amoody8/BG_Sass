@@ -1,0 +1,317 @@
+/*
+ *Base File for site-wide settings
+ */
+
+.upper-header-container {
+	max-width: $body-width;
+	margin: 0 auto;
+}
+
+#main {
+	padding: 0;
+	max-width: $body-width;
+	margin: 0 auto;
+}
+
+#main #content,
+#main #navigation {
+	padding: 0;
+}
+
+/**
+ *Navigation blocks
+ **/
+#page {
+	#navigation {
+		.block-taxonomy-menu-block {
+			display: inline-block;
+			vertical-align: top;
+			ul {
+				display: none;
+			}
+			h2:hover {
+				ul {
+					display: block;
+				}	
+			}
+		}
+	}
+}
+#page {
+	padding: 0;
+	#header-date {
+		span {
+			font-size: $h5-font-size;
+		}
+	}
+}
+
+#upper-header {
+	padding: 0;
+	margin: 0 0 1em 0;
+	background-color: #000;
+}
+
+
+.red {
+	color:  $red;
+}
+
+.min-300 {
+	min-width: 300px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+/*
+ *Article styling
+ */
+
+#page-title, .page-title {
+  h1.page__title {
+    font-family: $aleo-light;
+    background: none;
+    border-bottom: 2px solid #CCC;
+    font-size: $h2-font-size;
+    margin: 0 auto;
+    span {
+      background: none;
+    }
+  }
+}
+/*
+.subtitle {
+	color:  $gray-text;
+	font-family: $open-sans;
+}
+*/
+.title {
+	font-size: 26px;
+	font-family: $arapey-regular;
+}
+
+.title-small {
+	font-size: 20px;
+	font-family: $arapey-regular;
+	a {
+		color: #000;
+		&:hover {
+			color:  $bg-pink;
+		}
+	}	
+}
+
+body.page-node {
+	#page {
+		#main {
+			#content {
+				/*
+				h1.page__title {
+					background: url('../images/titlebg.png') repeat-x bottom;
+					font-size: $h1-font-size;
+					margin: 5px 0 10px 0;
+					padding: 0 0 10px 0;
+					border: none;
+					span { 
+						background: #FFF;
+						padding: 0 10px 0 0;
+					}
+				}
+				*/
+			}
+		}
+		article {
+			h2.subtitle {
+				font-size: 20px;
+				font-family: $aleo-light;
+				font-weight: normal;
+				color: $gray-text;
+				margin: 0;
+				padding: 0;
+			}
+			/*
+			header {
+				padding: 0 0 10px 0;
+				background: url("../images/titlebg.png") repeat-x bottom left;
+				font-family: $arapey-italic;
+				font-size: 14px;
+				font-style: italic;
+			}
+			*/
+		}
+	}
+}
+/**
+ *Default styles for panels
+ **/
+.panel-flexible {
+	.inside {
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.panels-flexible-row {
+		margin: 0;
+		padding-left: 0;
+	}
+}
+
+/**
+ *BX Slider site-wide styles
+ **/
+.bxslider  {
+	display: none;
+}
+.viewsSlideshowBxslider-processed {
+	display: block;
+}
+
+.bx-wrapper {
+	padding: 0;
+	.bx-viewport {
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border:  none;
+		left: 0px;
+		margin: 0 auto;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.bx-controls {
+		.bx-pager {
+			.bx-pager-item {
+				a.active {
+					background: $bg-pink;
+				}
+			}
+		}	
+	}
+}
+
+//Sidebar Newsletter sign-up
+#sidebar-newsletter {
+	h2 {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		background-color: $gray-background;
+		font-weight: normal;
+		font-family: $aleo-light;
+		border-bottom: none;
+	}
+	form {
+		background-color: $gray-background;
+		#form-fields {
+			text-align: center;
+			background-color: $gray-background;
+			padding: 0 20px 20px;
+			height: 60px;
+			.input-wrapper.email {
+				display: inline-block;
+				width: 170px;
+				text-align: center;
+				color: $gray-text;
+			}
+			.input-wrapper.submit {
+				display: inline-block;
+				width: 30px;
+			}
+		}
+	}
+	#required-info {
+		display: none;
+	}
+}
+
+/* Load more */
+.pager-load-more {
+	li {
+		a{
+			font-family:$aleo-light;
+			font-size:16px;
+			color:#000;
+			width:100%;
+			height:21px;
+			background:$bg-pink;
+			border-radius:10px;
+			padding:10px 0;
+			text-align:center;
+			display:block;
+			opacity:1;
+			text-decoration:none;
+			box-shadow:0px 2px 2px rgba(0,0,0,0.35);
+			-webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.35);
+			-moz-box-shadow:0px 2px 2px rgba(0,0,0,0.35);
+			-ms-box-shadow:0px 2px 2px rgba(0,0,0,0.35);
+		}
+		a:hover {
+			opacity:.9;
+		}
+	}
+}
+
+/* Infinite scrolling */
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 300px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/*
+ *Pinterest
+ */
+.p-container {
+	position: relative;
+	display: inline-block;
+	.pin-it {
+		position: absolute;
+		top: 20px;
+		right: 0px;
+		display: none;
+		a.p-button {
+			background-image: url(/sites/all/themes/custom/bg_zen/images/pin-it-purple.png);
+			background-size: 75px;
+			background-position: 0 0;
+			height: 75px;
+			width: 75px;
+			display: block;
+		}
+	}
+}
+
+/**
+ * Pinterest on SLIDESHOWS
+ **/
+#slides .active-slide .slide .pin-it {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+
+#slides .active-slide .slide .pin-it a.p-button {
+	background-image: url(/sites/all/themes/custom/bg_zen/images/pin-it-purple.png);
+	background-size: 75px;
+  background-size: 75px;
+  background-position: 0 0;
+  height: 75px;
+  width: 75px;
+  display: block;
+}
+

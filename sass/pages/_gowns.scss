@@ -1,0 +1,528 @@
+
+#bridal-gown-landing {
+
+	.panels-flexible-region {
+		width: 100%;
+	}
+
+			
+	margin: 30px 0 0 0;
+	.gown-landing-search-region {
+		max-width: 840px;
+		margin-right: -20px;
+		#gown-search-header {
+			text-align: center;
+			position: relative;
+			#dress {
+				background: url('../images/dress-icon.png') no-repeat 0 0;
+				width: 20px;
+				height: 40px;
+			}
+			#head {
+				font-family: $open-sans;
+				font-size: $h2-font-size;
+				position: relative;
+				top: -10px;
+				left: 5px;
+			}
+		}
+		#views-exposed-form-bridal-gown-search-panel-pane-1 .views-exposed-widget {
+			width: 46%;
+			min-width: 100px;
+			margin: 5px 0 5px 5px;
+			padding: 0;
+			height: 34px;
+			border: 2px solid #CCC;
+			background: url('../images/select-down-arrow.png') no-repeat 97%;
+			select {
+				width: 100%;
+				font-family: $open-sans;
+				font-size: $h3-font-size;
+				background: transparent;
+				border: 0;
+				border-radius: 0;
+				height: 34px;
+				padding: 5px;
+				-webkit-appearance: none;
+			}
+		}
+		#views-exposed-form-bridal-gown-search-panel-pane-1 .views-exposed-widget.views-submit-button {
+			display: none;
+		}
+	}
+	.gown-gallery-top-ad-region {
+		float: right;
+		width: 300px;
+		.panels-flexible-region-inside-last {
+			padding: 0;
+		}
+	}
+	.gown-gallery-results-row {
+		margin: 0 -11px;
+	}
+	.view-bridal-gown-search {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		.view-content {
+		}
+		.gown-results-item-list {
+			ul {
+				li {
+					//min-width: 175px;
+					width: 32.5%;
+					list-style: none outside none;
+					display: inline-block;
+					text-align: center;
+					position: relative;
+					margin: 0 0 10px 0;
+					.views-field-field-images {
+						img {
+							width: 100%;
+						}
+					}
+					.spotlight {
+						position: absolute;
+						top: 0px;
+						right: 0px;
+						width: 26%;
+					}
+					.caption {
+						position: absolute;
+						bottom: 5px;
+						text-align: center;
+						text-transform: uppercase;
+						width: 100%;
+						padding: 5px 0;
+						background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(1,1,1,0) 1%, rgba(55,55,55,0.65) 100%);
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(1%,rgba(1,1,1,0)), color-stop(100%,rgba(55,55,55,0.65)));
+						background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(1,1,1,0) 1%,rgba(55,55,55,0.65) 100%);
+						background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(1,1,1,0) 1%,rgba(55,55,55,0.65) 100%);
+						background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(1,1,1,0) 1%,rgba(55,55,55,0.65) 100%);
+						background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(1,1,1,0) 1%,rgba(55,55,55,0.65) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6373737',GradientType=0 );
+						a {
+							font-family: $open-sans;
+							font-weight: bold;
+							font-size: $base-font-size;
+							color: #FFF;
+							text-decoration: none;
+						}
+						a:hover {
+							color: #f49ac1;
+						}
+					}		
+				}
+			}
+		}
+		.item-list {
+			width: 100%;
+			position: relative;
+			top: -25px;
+			@include gown-nav;
+		}
+	}
+}
+
+
+/**
+ *Gown-details - Lightbox
+ **/
+body.bridal-gowns #gown-pop {
+	display: none;
+}
+body.bridal-gowns .fancybox-inner {
+	overflow: visible !important;
+}
+
+#gown-details {
+	background-color: #FFF;
+	padding: 10px;
+	max-width: 900px;
+	#slide-wrapper {
+		height: 100%;
+		position: relative;
+	}
+	#supporting {
+		display: inline-block;
+		width: 100px;
+		vertical-align: top;
+		margin: 0 10px 0 0;
+		li {
+			list-style: none outside none;
+			img {
+				
+			}
+		}	
+	}
+	.name {
+		font-family: $open-sans;
+		font-size: $h1-font-size;
+		font-weight: bold;
+		margin: 0 0 -5px 0;
+	}
+	.price-title {
+		border-top: 2px solid #ccc;
+		border-bottom: 2px solid #ccc;
+		padding: 5px 0;
+		margin: 0 0 20px 0;
+		span {
+			display: inline-block;
+			text-align: center;
+			width: 49%;
+		}
+		span.price {
+			border-right: 2px solid #ccc;
+		}
+	}
+	#center {
+		width: 59%;
+		display: inline-block;
+		margin: 0 10px 0 0;
+		.title-info {
+			display: none;
+		}
+		#gown-image {
+			position: relative;
+		}
+		.gown-social {
+		}
+		#photo-credit {
+			position: relative;
+			font-size: $h5-font-size;
+			left: 10px;
+			top: -30px;
+			//width: 100%;
+			text-align: left;
+			color: #FFF;
+		}
+	}
+	#center.supporting {
+		width: 45%;	
+	}
+	#info {
+		position: relative;
+		display: inline-block;
+		width: 39%;
+		vertical-align: top;
+		height: 100%;
+		.details {
+			margin: 0 0 20px 0;
+		}	
+		.info-header {
+			color: $bg-pink;
+			font-family: $open-sans;
+			font-size: $h3-font-size;
+			margin: 0;
+		}
+		.gown-gray {
+			font-weight: normal;
+		}
+		p {
+			margin: 0 0 5px 0;
+			padding: 0;
+		}
+		ul {
+			li {
+				span {
+					display: inline-block;
+					vertical-align: top;
+				}
+				.label {
+					width: 125px;
+				}
+				.fabric-value {
+					display: block;
+				}
+			}
+		}
+		.designer {
+			margin: 0 0 20px 0;
+			.retail-link {
+				a {
+					text-decoration: none;
+					color: #000;
+				}
+				a:hover {
+					color: $bg-pink;
+				}
+			}
+		}
+		#collection-more {
+			h3 {
+				margin: 0 0 10px 0;
+			}
+			ul {
+				margin: 0;
+			}
+			.more-img {
+				display: inline-block;
+				width: 28%;
+				max-width: 100px;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+	#info.supporting {
+		width: 36%;
+	}
+	#upper-gown-nav {
+		display: none;
+	}
+	#gown-nav {
+		position: absolute;
+		bottom: 50%;
+		width: 100%;
+		li {
+			display: inline-block;
+			padding: 0;
+			a {
+				text-indent: -9999px;
+				display: block;
+				width: 35px;
+				height: 74px;
+			}
+			a:hover {
+				background-color: #000;	
+			}
+		}	
+		li.pager-previous {
+			position: absolute;
+			left: -50px;
+			a {
+				background: url('../images/sprites/gown-nav.png') no-repeat 0 0;
+			}
+		}
+		li.pager-next {
+			position: absolute;
+			right: -30px;
+			a {
+				background: url('../images/sprites/gown-nav.png') no-repeat -35px 0;
+			}
+		}
+	}
+}
+
+
+/**
+ *Spotlight collection
+ **/
+body.bridal-gowns {
+	#main {
+		#content {
+			padding: 0;
+		}
+	}
+	.view-spotlight-collection {
+		.view-header {
+			background: url('../images/titlebg.png') repeat-x center;
+			height: auto;
+			max-width: 1170px;
+			width:100%;
+			display: block;
+			margin:0 auto 20px auto;
+			h2.spotlight {
+				background:#f49ac1;
+				font-family:'AleoLight',Helvetica, Arial, sans-serif;
+				font-size:22px;
+				color:#fff;
+				margin:0 auto;
+				width:220px;
+				padding:7px 5px;
+				font-weight:normal;
+				text-align:center;
+				span {
+					padding:5px;
+					border:2px solid #fff;
+				}
+			}
+		}
+	}
+	.spotlight-carousel {
+		margin: 0 auto;
+		.bx-viewport {
+			box-shadow: none;
+			border: none;
+			.view-content {
+				div {
+					img {
+						margin: 0 auto;
+					}
+				}	
+			}
+		}
+		.bx-controls {
+			.bx-pager {
+				display: none;
+			}
+			.bx-prev {
+				left: -0px;
+				background: url('../images/sprites/arrows-sprite.png') no-repeat 0 0;
+				width: 11px;
+			}
+			.bx-next {
+				right: 0px;
+				background: url('../images/sprites/arrows-sprite.png') no-repeat 0 -31px;
+				width: 11px;
+			}
+		}
+	}
+	//Designer listing
+	#designers {
+		max-width: 100%;
+		li {
+			.designer-container {
+				position: relative;
+				.designer-panel {
+					background: #efefef;
+					top: 10%;
+					height: 66.666667%;
+					width: 47%;
+					left: 50.5%;
+					position: absolute;
+					z-index: 10;
+					opacity: 1;
+					.designer-title {
+						font-family: $open-sans-bold;
+						font-weight: bold;
+						font-size: $h5-font-size;
+						color: #000;
+						border-bottom: 1px solid #000;
+						margin: 7px auto;
+						width: 90%;
+						text-align: center;
+					}
+					.designer-list {
+						position: relative;
+						padding: 0 0 0 10px;
+						height: 75%;
+						overflow-y: scroll;
+						list-style: none;
+						.designer {
+							a {
+								color:#000;
+								&:hover {
+									color: $bg-pink; 
+								}
+							}
+						}
+					}
+				}
+				.designer-range {
+					bottom: 20px;
+					left: 20px;
+					width: 70px;
+					position: absolute;
+					z-index: 11;
+					font-size: 30px;
+					color: #FFF;
+					font-family: $aleo-light;				
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 1169px) {
+	#bridal-gown-landing {
+		.gown-landing-search-region {
+			width: 62%;
+		}
+		.gown-gallery-results-row {
+			margin: 0;
+		}
+	}
+	#gown-details {
+		#slide-wrapper {
+			margin:  32px 0 0 0;
+		}
+		#supporting {
+			display: none;
+		}	
+		#center {
+			width: 100%;
+			.title-info {
+				display: block;
+			}
+		}
+		#center.supporting {
+			width: 100%;
+		}
+		#info {
+			width: 100%;
+			.title-info {
+				display: none;
+			}
+			#collection-more {
+				ul {
+					li.more-img {
+						width: 29%;
+					}
+				}
+			}
+		}
+		#info.supporting {
+			width: 100%;
+		}
+		#gown-nav {
+			display: none;
+		}
+		#upper-gown-nav {
+			display: block;
+			width: 215px;
+			.item-list {
+				@include gown-nav;
+				ul.pager {
+					margin: 0 0 0 -20px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	#bridal-gown-landing {
+		.gown-landing-search-region {
+			width: 100%;
+		}
+		.gown-gallery-top-ad-region {
+			display: none;
+		}
+		.view-bridal-gown-search {
+			.gown-results-item-list {
+				ul {
+					li {
+						.caption {
+							a {
+								font-size: $h6-font-size;
+							}
+						}
+					}
+				}
+			}
+		}
+		#designers-a-z {
+			max-width: 524px;
+			margin: 0 auto;
+			#designers {
+				max-height: 690px;
+				.designer-section {
+					width: 100%;
+					height: 80px;
+					overflow: hidden;
+					.designer-container {
+						.designer-range {
+							top: 30px;
+							right: 20px;
+							left: auto;
+						}
+						.designer-panel {
+							top: 80px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

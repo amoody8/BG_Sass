@@ -1,0 +1,48 @@
+/*
+ *Article listings
+ */
+.views-list {
+	.views-row {
+		padding: 20px;
+		border-bottom: 1px dotted #000;
+		.list-image {
+			width: 28%;
+			margin: 0 2% 0 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.list-text {
+			width: 69.5%;
+			display: inline-block;
+			.read-more {
+				text-align: right;
+			}
+		}
+	}
+}
+
+/*
+ *2-accross listings with gradient title
+ */
+.gradient-titles {
+	font-size: 0;
+	.views-row {
+		width: 48%;
+		padding: 0;
+		margin: 0 1% 10px 1%;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		.list-image {
+			width: 100%;
+			margin: 0;
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+		.views-field-title {
+			@include shaded-title;
+		}
+	}
+}

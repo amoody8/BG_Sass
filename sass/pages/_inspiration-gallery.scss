@@ -1,0 +1,78 @@
+/*
+ *file for the Inspiration Gallery
+ */
+body.page-photos-get-inspired-inspiration-gallery {
+	#main {
+		#content {
+			padding: 0px;
+			display: block;
+		}	
+	}
+	#gown-pop {
+		.ig-pop-title {
+			text-align: center;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.ig-page {
+		text-align: center;
+		.view-content {
+			.item-list {
+				width: 100%;
+				.views-row {
+					width: 24.3%;
+					margin: 0 0 -5px 0;
+					padding: 3px;
+					&:hover {
+						z-index: 10;
+					}
+					img {
+						&:hover {
+							margin: -3px 0 0 -3px;
+							//padding: 5px;
+							border: 3px solid #FFF;
+							@include box-shadow(#666 0px 0px 10px 2px);
+							@include border-radius(5px);
+						}
+					}	
+				}
+				.views-row.ad {
+					//min-width: 300px;
+					padding: 20px 0;
+				}
+			}
+		}
+	}	
+}
+
+@media all and (max-width: 1023px) {
+	body.page-photos-get-inspired-inspiration-gallery {
+		.ig-page {
+			.view-content {
+				.views-row {
+					width: 32.5%;
+				}
+				.views-row.w2 {
+					width: 65%;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	body.page-photos-get-inspired-inspiration-gallery {
+		.ig-page {
+			.view-content {
+				.views-row, .views-row.w2 {
+					display: block;
+					padding: 0px;
+					margin: 10px 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

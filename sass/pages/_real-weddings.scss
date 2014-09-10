@@ -1,0 +1,393 @@
+/**
+ * Styles for Real Wedding Landing page,
+ * individual Real Weddings,
+ * and slideshow of images
+ */
+
+/**
+ *	Search form used on landing page and individual Real Weddings
+ */
+#rw-search, .real-weddings {
+	h2 {
+		text-align:center;
+		margin: 0;
+		background-color: inherit;
+		border: none;
+		font-family: $open-sans;
+		font-size: 19px;
+		font-weight: normal;
+	}
+}
+
+#rw-search {
+	form {
+		max-width:768px;
+		margin:0 auto 0 auto;
+		div {
+			display:inline-block;
+			@media screen and (max-width:767px){
+				display:block;
+			}
+		}
+		@media screen and (max-width:767px){
+			.views-exposed-widget {
+				float: none;
+			}
+		}
+		.form-item-location, .form-item-season, .form-item-theme {
+			padding:5px 10px;
+			width:200px;
+			background:#00ced1 url('/sites/all/themes/custom/bg_zen/images/select-down.png') no-repeat 95%;
+			vertical-align:bottom;
+			margin:auto;
+			
+			@media screen and (max-width:767px){
+				width:auto;
+				max-width:100%;
+				margin:5px auto;
+				background:#00ced1 url('/sites/all/themes/custom/bg_zen/images/select-down.png') no-repeat 97%;
+			}
+		}
+		select {
+			background: transparent;
+			padding: 3px 10px;
+			font-size: 16px;
+			line-height: 1.25;
+			border: 0;
+			border-radius: 0;
+			-webkit-appearance: none;
+			min-width:205px;
+			outline:none !important;
+			position:relative;
+			
+			@media screen and (max-width:767px){
+				width:100%;
+			}
+		}
+		input[type="submit"] {
+			background:#000 url('/sites/all/themes/custom/bg_zen/images/submit-arrow.png') no-repeat center;
+			background-size:25px;
+			min-width:40px;
+			min-height:36px;
+			width:auto;
+			border: 0;
+			color:#FFF;
+			font-size: 16px;
+			line-height: 1;
+			text-indent:-999px;
+			direction:ltr;
+			margin:0;
+			vertical-align:bottom;
+			cursor:pointer;
+			
+			@media screen and (max-width:767px){
+				width:100%;
+				text-indent:0;
+				background:#000;
+			}
+		}
+	}		
+}
+
+/*
+* Caption styles
+*/
+.real-wedding-list {
+	.with-caption {
+		cursor: pointer;
+		position: relative;
+		.img-title {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			margin: 0;
+			width: 100%;
+			text-align: center;
+			background: rgba(0,0,0,0);
+			color: rgba(0,0,0,0);
+			transition: all 0.5s ease;
+			@media only screen and (max-width:1024px){
+				display: none;
+			}
+			//For body display
+			.img-body {
+				padding: 0 5%;
+				font-family: $arapey-italic;
+				font-style: italic;
+				font-size: 20px;
+				position: absolute;
+				top: 5%;
+				text-align: left;
+				p {
+					margin:  0;
+				}
+				a {
+					color: rgba(255,255,255,0);
+					&:hover {
+						color: $bg-pink;
+					}
+				}
+			}
+			//For title display
+			.rw-title {
+				text-align: center;
+				width: 100%;
+				padding: 0;
+				font-family: $arapey-italic;
+				font-style: italic;
+				font-size: 28px;
+				position: absolute;
+				top: 45%;
+				text-align: center;
+				p {
+					margin:  0;
+				}
+				a {
+					color: rgba(255,255,255,0);
+					&:hover {
+						color: $bg-pink;
+					}
+				}
+			}
+		}
+	}
+	.with-caption:hover {
+		.img-title {
+			//opacity: .8;
+			background: rgba(0,0,0,.8);
+			color: rgba(255,255,255,1);
+			a {
+				color: rgba(255,255,255,1);
+			}
+		}	
+	}
+}
+
+/**
+ * Landing Page
+ */
+body.page-photos-get-inspired-real-weddings {
+	#main {
+		#content {
+			display: block;
+			padding: none;
+			.real-weddings {
+				ul.real-wedding-list {
+					.views-row {
+						width: 24%;
+						margin: 0;
+						padding: .5%;
+						figure {
+							position: relative;
+						}
+						&.ad {
+							
+						}
+						@media only screen and (max-width:600px){
+							width: 100%;
+							&.ad {
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+/**
+ * Individual Real Wedding
+ */
+
+#page.real-wedding {
+	#main {
+		#content {
+			display: block;
+			padding: 0;
+		}
+	}
+	#rw-images {
+		width: 100%;
+	}
+	#masonry-container {
+		margin: 0 auto;
+	}
+	.views-row {
+		width: 24%;
+		margin: 0;
+		padding: .5%;
+		@media only screen and (max-width:600px){
+			width: 100%;
+			padding: 0;
+			margin: 0 0 10px 0;
+		}
+		img {
+		}
+	}
+	.views-row.w2 {
+		width: 48.5%;
+		margin: 0;
+		padding: .5%;
+		@media only screen and (max-width:600px){
+			width: 100%;
+			padding: 0;
+			margin: 0 0 10px 0;
+		}
+	}	
+	.top-row {
+		display: table;
+		width: 100%;
+		margin: 0 0 20px 0;
+		.details {
+			display: table-cell;
+			vertical-align: top;
+			padding: 0 10px;
+			margin: 0;
+			position: relative;
+			@media only screen and (max-width:1024px){
+				padding: 0;
+			}
+			.container {
+				background-color: $gray-background;
+				padding: 5.25% 0;
+				@media only screen and (max-width:1024px){
+					padding: 0;
+				}
+				h1 {
+					font-family: $arapey-italic;
+					font-style: italic;
+					text-align: center;
+				}
+				p {
+					margin: 0;
+				}
+				.rw-info {
+					display: none;
+					padding: 10px 20px;
+					@media only screen and (max-width:1024px) {
+						display: block;
+						padding: 10px 0;
+					}	
+				}
+			}
+		}
+		.manual-ad {
+			display: table-cell;
+			width: 300px;
+			margin: 0;
+			vertical-align: middle;
+			@media only screen and (max-width:1024px){
+				display: none;
+			}
+		}
+	}
+}
+
+//Load more button
+@include load-more;
+
+/* Fancybox */
+.fancybox-skin {
+	background: none;
+	box-shadow: none !important;
+	border-radius: none !important;
+}
+#rw-pop {
+	position: relative;
+	text-align: center;
+	padding: 1% 0;
+	//background: url('/sites/all/libraries/fancybox/fancybox_overlay.png') repeat 0 0;
+	#rw-details {
+		margin: 0 20px;
+		#main-image {
+			width: 90%;
+			max-width: 600px;
+			margin: 0 auto 20px auto;
+			position: relative;
+			img {
+				border: 10px solid #FFF;
+			}
+			#supporting {
+				padding: 8px;
+				background-color: #FFF;
+				position: absolute;
+				left: 15px;
+				bottom: 15px;
+				li {
+					img {
+						border: 1px solid #333;
+						margin: 0 0 10px 0;
+					}
+					img.last {
+						margin: 0;
+					}
+				}
+			}
+			#rw-nav {
+				a {
+					position: absolute;
+					top: 45%;
+					width: 35px;
+					height: 74px;
+				}
+				#prev {
+					left: -40px;
+					background: url('../images/sprites/gown-nav.png') no-repeat 0 0;
+				}
+				#next {
+					position: absolute;
+					right: -60px;
+					background: url('../images/sprites/gown-nav.png') no-repeat -35px 0;
+				}
+			}
+		}
+		#caption {
+			width: 80%;
+			max-width: 500px;
+			padding: 1%;
+			margin: 0 auto;
+			@include border-radius(15px);
+			background-color: #FFF;
+			font-family: $open-sans-italic;
+			font-style: italic;
+			font-size: 16px;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+
+/*
+@media only screen and (max-width:1024px){
+	#page.real-wedding {
+		.details {
+			
+			.rw-info {
+				display: block;
+				padding: 10px 0;
+			}
+		}
+		.manual-ad {
+			display: none;
+		}
+		.img-title {
+			display: none;
+		}
+	}
+}
+
+
+@media only screen and (max-width:600px){
+	#page.real-wedding {
+		.rw-image {
+			width: 100%;
+		}
+		.rw-image.w2 {
+			width: 100%;
+		}
+	}
+}
+*/
