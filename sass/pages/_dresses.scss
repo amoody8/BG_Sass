@@ -1,0 +1,38 @@
+/**
+ *Styles for Beauty and health
+ */
+
+body.page-dresses {
+	.pane-bg-gowns-gown-designer-listing {
+		.pane-title {
+			background: none;
+			border-bottom: none;
+			margin: 0;
+		}
+		#designers-a-z {
+			@media all and (min-width: 767px) {
+				max-height: 320px;
+				overflow: hidden;
+			}
+		}
+	}
+	.view-header {
+		.center-title {
+			@include center-title;
+		}
+	}
+	.view-home-page-slider {
+		.bx-wrapper {
+			margin: 0 auto 20px;
+		}
+	}
+	.channel-one-three {
+		.channel-latest {
+			.views-row {
+				.subtitle {
+					display: none;
+				}
+			}
+		}
+	}
+}

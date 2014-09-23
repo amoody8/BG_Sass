@@ -108,13 +108,16 @@
 article.node-potd, article.node-totd {
 	margin: 0;
 	p {
-		margin: 0;
+		margin: 1.5em 0;
 	}
 	.body {
-		max-width: 600px;
+		max-width: 620px;
 		margin: 0 auto;
 		.body-text {
 			position: relative;
+			.totd-image, .potd-image {
+				text-align: center;
+			}
 			#nav {
 				a {
 					position: absolute;

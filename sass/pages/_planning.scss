@@ -1,0 +1,122 @@
+/*
+ *Styles for planning channel
+ */
+body.planning-landing {
+	#planning-ops {
+		padding: 0 0 10px 0;
+		margin: 0 0 20px 0;
+		border-bottom: 3px solid #000;
+		max-width:100%;
+		@media all and (max-width: 767px) {
+			overflow-x:scroll;
+		}
+		ul {
+			font-size: 0;
+			min-width: 670px;
+			li {
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				width: 31.6%;
+				margin: 0;
+				padding: 0;
+				.image {
+					
+				}
+				.caption {
+					@include shaded-title;
+					p {
+						padding: 4%;
+						a {
+							font-size: 36px; 
+							@media all and (max-width: 767px) {
+								font-size: 28px;
+							}
+						}
+					}
+				}
+			}
+			li.row-2 {
+				margin: 0 2.5%;
+			}
+		}
+	}
+	#switcher-target {
+		margin: 0 0 20px 0;
+		ul {
+			font-size: 0;
+			li {
+				display: inline-block;
+				vertical-align: top;
+				width: 23%;
+				padding: 1%;
+			}
+		}
+	}
+	.content-ig-slider {
+		background-color: #FFF;
+		padding: 0;
+		margin: 0;
+		.view-header {
+			h1 {
+				@media all and (max-width: 600px) {
+					text-align: center;
+				}
+				span {
+					background-color: $darkturquoise;
+					color: #000;
+					font-family: $aleo-light;
+					font-size: 28px;
+					font-weight: normal;
+					padding: 5px 10px;
+					margin: 0 0 0 80px;
+					@media all and (max-width: 600px) {
+						margin: 0;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.content-ig-block {
+			padding: 30px 0 0 0;
+			margin: -12px 0 30px 0;
+			background-color: #f5f5f5;
+			&:after {
+				content: "";
+				height: 27px;
+				display: block;
+				background: #FFF url('/sites/all/themes/custom/bg_zen/images/gg-shadow.png') no-repeat;
+			}
+			.bx-wrapper {
+				.bx-viewport {
+				background-color: #f5f5f5;
+					max-height: 250px;
+				}
+				.bx-controls {
+					.bx-controls-direction {
+						a {
+							width: 60px;
+							height: 60px;
+							top: 40%;
+						}
+						.bx-prev {
+							background: url("../images/potd-next.png") no-repeat 0 0;
+							left: -60px;
+						}
+						.bx-next {
+							background: url("../images/potd-prev.png") no-repeat 0 0;
+							right: -60px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.view-channel-most-recent {
+		.view-header {
+			.center-title {
+				@include center-title;
+			}
+		}
+	}
+}

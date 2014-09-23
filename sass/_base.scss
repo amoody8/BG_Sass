@@ -10,7 +10,7 @@
 #main {
 	padding: 0;
 	max-width: $body-width;
-	margin: 0 auto;
+	margin: 0 auto 30px auto;
 }
 
 #main #content,
@@ -70,23 +70,20 @@
  */
 
 #page-title, .page-title {
+	background: url('../images/titlebg.png') repeat-x bottom;
+	margin: 5px 0 10px 0;
+	padding: 0 0 10px 0;
+	border: none;
   h1.page__title {
     font-family: $aleo-light;
-    background: none;
-    border-bottom: 2px solid #CCC;
-    font-size: $h2-font-size;
-    margin: 0 auto;
+		font-size: $h1-font-size;
     span {
       background: none;
+				padding: 0;
     }
   }
 }
-/*
-.subtitle {
-	color:  $gray-text;
-	font-family: $open-sans;
-}
-*/
+
 .title {
 	font-size: 26px;
 	font-family: $arapey-regular;
@@ -107,19 +104,6 @@ body.page-node {
 	#page {
 		#main {
 			#content {
-				/*
-				h1.page__title {
-					background: url('../images/titlebg.png') repeat-x bottom;
-					font-size: $h1-font-size;
-					margin: 5px 0 10px 0;
-					padding: 0 0 10px 0;
-					border: none;
-					span { 
-						background: #FFF;
-						padding: 0 10px 0 0;
-					}
-				}
-				*/
 			}
 		}
 		article {
@@ -130,6 +114,9 @@ body.page-node {
 				color: $gray-text;
 				margin: 0;
 				padding: 0;
+				p {
+					margin: 0;
+				}
 			}
 			/*
 			header {
@@ -190,41 +177,6 @@ body.page-node {
 				}
 			}
 		}	
-	}
-}
-
-//Sidebar Newsletter sign-up
-#sidebar-newsletter {
-	h2 {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-		background-color: $gray-background;
-		font-weight: normal;
-		font-family: $aleo-light;
-		border-bottom: none;
-	}
-	form {
-		background-color: $gray-background;
-		#form-fields {
-			text-align: center;
-			background-color: $gray-background;
-			padding: 0 20px 20px;
-			height: 60px;
-			.input-wrapper.email {
-				display: inline-block;
-				width: 170px;
-				text-align: center;
-				color: $gray-text;
-			}
-			.input-wrapper.submit {
-				display: inline-block;
-				width: 30px;
-			}
-		}
-	}
-	#required-info {
-		display: none;
 	}
 }
 

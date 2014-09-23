@@ -33,11 +33,12 @@ Drupal.behaviors.bg_rw_behavior = {
 				);
 				$('#main-image', context).on('click', '#supporting img', function(e){
 					var sup_rel = $(this).attr('rel');
-					var main_src = $('#main-image img').attr('src');
-					var main_rel = $('#main-image img').attr('rel');
+					var main_src = $('#main-image #rw-imag').attr('src');
+					var main_rel = $('#main-image #rw-image').attr('rel');
 					var sup_src = $(this).attr('src');
-					$('#main-image img').attr('src', sup_rel);
-					$('#main-image img').attr('rel', sup_src);
+
+					$('#main-image #rw-image').attr('src', sup_rel);
+					$('#main-image #rw-image').attr('rel', sup_src);
 					$(this).attr('src', main_rel);
 					$(this).attr('rel', main_src);
 					return false;

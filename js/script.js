@@ -29,7 +29,7 @@
 			}
 			      
       //Newsletter Sign-up
-      $('#content-newsletter-form #form-fields input.text, #hp-right-newsletter #form-fields input.text').click(function(){
+      $('#content-newsletter-form #form-fields input.text, #sidebar-newsletter #form-fields input.text').click(function(){
         $(this).val('');
       });
       
@@ -48,7 +48,8 @@
       /**
        *Pinterest in content
        **/
-			$('body:not(.bridal-gowns, .front) #content img').each(
+			//$('body:not(.bridal-gowns, .front) #content img').each(
+			$('article img').each(
         function(index){
 					if (((($(this).width() >= 400 && $(this).height() > 200) || $(this).height() >= 400)  && ($(this).css('float') != 'left' && $(this).css('float') != 'right')) || $(this).hasClass('slide-image')) {
  					  var here = location.href;
@@ -60,7 +61,7 @@
             if (!$(this).parent('.p-container').length) {
               $(this).wrap('<div class="p-container" />');
               //$(this).parent('.p-container').css('width', $(this).width());
-              $(this).parent('.p-container').css('width', '100%');
+              $(this).parent('.p-container').css('width', 'auto');
               $(this).before("<div class='pin-it'><a class='p-button' href='javascript:void();'></a></div>");
             }
             $(this).parent('.p-container').children('.pin-it').on('click', '.p-button', function(){
@@ -177,7 +178,69 @@
 			});
 			
 			// Get RID of all WYSIWYG styling
-			$('article img').removeAttr('style');
+			//$('article img').removeAttr('style', 'height', 'width');
+			
+			//Youtube vides
+			$("body.page-videos .youtube").fancybox({
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: true,
+				autoResize: true,
+				autoSize	: true,
+				closeBtn	: false,
+				closeClick	: false,
+				openEffect	: 'none',
+				helpers : {
+					media : {}
+				}
+			});
+
+			$('body.page-beauty-health #b-h-fitness .latest-list .channel-latest, body.page-dresses #d-accessories .latest-list .channel-latest').bxSlider({
+				minSlides: 1,
+				maxSlides: 4,
+				slideMargin: 20,
+				slideWidth: 190,
+				preloadImages: 'all',
+				controls: true,
+				pager: false,
+				moveSlides: 2
+			});
+
+			$('body.page-beauty-health #b-h-wellness .latest-list .channel-latest, body.page-dresses #d-dress-trends .latest-list .channel-latest').bxSlider({
+				minSlides: 1,
+				maxSlides: 3,
+				slideMargin: 10,
+				slideWidth: 270,
+				preloadImages: 'all',
+				controls: true,
+				pager: false,
+				moveSlides: 1
+			});
+			
+			$('body.page-planning .view-inspiration-gallery .content-ig-block .content-ig-list').bxSlider({
+				minSlides: 1,
+				maxSlides: 3,
+				slideMargin: 10,
+				slideWidth: 220,
+				preloadImages: 'all',
+				controls: true,
+				pager: false,
+				moveSlides: 1
+			});
+
+			//Article share links
+			$('.share-link').click(function(){
+				var url = $(this).attr('href');
+				window.open(url, 'share', 'width=640,height=320');
+				return false;
+			});
+			
+			$('body.planning-landing #switcher-target').load('ajax/get-planning-content?pane=getting-started');
+			$('body.planning-landing #planning-ops li a').click(function(){
+				var target = $(this).attr('href');
+				$('body.planning-landing #switcher-target').load('ajax/get-planning-content?pane=' + target);
+				return false;
+			});
     }
   };
 })(jQuery, Drupal, this, this.document);

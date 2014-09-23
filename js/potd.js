@@ -1,7 +1,6 @@
 (function ($, Drupal, window, document, undefined) {
 Drupal.behaviors.bg_potd_behavior = {
   attach: function(context, settings) {
-		$('#potd-landing', context).parents('body').append("<div id='potd-pop'></div>");
 		$('#potd-wrapper #load-more').click(function(){
 			var more = $(this);
 			var startNum = more.attr('data-start');
@@ -10,7 +9,15 @@ Drupal.behaviors.bg_potd_behavior = {
 				more.attr('data-start', parseInt(startNum) + parseInt(12));
 			});
 		});
-		
+		$('#totd-wrapper #load-more').click(function(){
+			var more = $(this);
+			var startNum = more.attr('data-start');
+			$.get('/ajax/totd/get-many/' + startNum, function(data){
+				$('#totd-landing ul').append(data);
+				more.attr('data-start', parseInt(startNum) + parseInt(12));
+			});
+		});
+		/*
 		$('#potd-pop').on('click', '#rw-nav a', function(){
 			$.get('/ajax/potd/get-single/' + $(this).attr('rel'), function(data){
 				$('#potd-pop').fadeOut('normal', function(){
@@ -20,7 +27,7 @@ Drupal.behaviors.bg_potd_behavior = {
 			});	
 			return false;
 		});
-		
+		*/
   }
 };
 })(jQuery, Drupal, this, this.document);

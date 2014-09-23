@@ -1,0 +1,55 @@
+/*
+ *Styles for the WIN! channel
+ */
+body.sweepstakes-landing {
+	.view-display-id-panel_pane_1 {
+		.views-row {
+			padding: 20px 0;
+			border-bottom: 1px solid #CCC;
+			.list-image {
+				width: 33%;
+				display: inline-block;
+				vertical-align: top;
+				@media screen and (max-width:767px) {
+					width: 100%;
+				}
+			}
+			.list-text {
+				display: inline-block;
+				vertical-align: top;
+				width: 60%;
+				padding: 0 0 0 5%;
+				.title {
+					font-family: $arapey-italic;
+					font-style: italic;
+					font-size: 26px;
+					margin: 0 0 10px 0;
+				}
+				.subtitle {
+					margin: 0 0 10px 0;
+					a {
+						font-weight: bold;
+						text-decoration: underline;
+					}
+				}
+				.enter-link {
+					margin: 30px 0 0 0;
+					a {
+						color: #FFF;
+						background-color: $bg-pink;
+						padding: 5px;
+						font-family: $open-sans;
+						font-weight: bold;
+						font-size: 18px;
+						&:hover {
+							opacity: .8;
+						}
+					}
+				}
+			}
+		}
+		.views-row-last {
+			border-bottom: none;
+		}
+	}
+}

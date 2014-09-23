@@ -85,25 +85,30 @@ $zen-auto-include-item-base: false;
 }
 
 @media all and (min-width: 481px) {
-
+	/*
   #page-title, .page-title {
+		background: url('../images/titlebg.png') repeat-x bottom;
+		font-size: $h1-font-size;
+		margin: 5px 0 10px 0;
+		padding: 0 0 10px 0;
+		border: none;
 		h1.page__title {
-			background: url('../images/titlebg.png') repeat-x bottom;
-			font-size: $h1-font-size;
-			margin: 5px 0 10px 0;
-			padding: 0 0 10px 0;
-			border: none;
 			span { 
-				background: #FFF;
-				padding: 0 10px 0 0;
+				padding: 0;
 			}
 		}
   }
-	//Hide slieshow navigation
+	*/
 	
 }
 
 @media all and (min-width: 1025px) {
 }
 
+/*
+ *Fix for FF responsive images
+ */
+img {
+	width: 100%;
+}
 

@@ -1,0 +1,16 @@
+/**
+ *Styles for Beauty and health
+ */
+
+body.page-beauty-health {
+	.view-header {
+		.center-title {
+			@include center-title;
+		}
+	}
+	.view-home-page-slider {
+		.bx-wrapper {
+			margin: 0 auto 20px;
+		}
+	}
+}

@@ -367,60 +367,6 @@ body.bridal-gowns {
 			}
 		}
 	}
-	//Designer listing
-	#designers {
-		max-width: 100%;
-		li {
-			.designer-container {
-				position: relative;
-				.designer-panel {
-					background: #efefef;
-					top: 10%;
-					height: 66.666667%;
-					width: 47%;
-					left: 50.5%;
-					position: absolute;
-					z-index: 10;
-					opacity: 1;
-					.designer-title {
-						font-family: $open-sans-bold;
-						font-weight: bold;
-						font-size: $h5-font-size;
-						color: #000;
-						border-bottom: 1px solid #000;
-						margin: 7px auto;
-						width: 90%;
-						text-align: center;
-					}
-					.designer-list {
-						position: relative;
-						padding: 0 0 0 10px;
-						height: 75%;
-						overflow-y: scroll;
-						list-style: none;
-						.designer {
-							a {
-								color:#000;
-								&:hover {
-									color: $bg-pink; 
-								}
-							}
-						}
-					}
-				}
-				.designer-range {
-					bottom: 20px;
-					left: 20px;
-					width: 70px;
-					position: absolute;
-					z-index: 11;
-					font-size: 30px;
-					color: #FFF;
-					font-family: $aleo-light;				
-				}
-			}
-		}
-	}
 }
 
 @media only screen and (max-width : 1169px) {
@@ -501,24 +447,24 @@ body.bridal-gowns {
 				}
 			}
 		}
-		#designers-a-z {
-			max-width: 524px;
-			margin: 0 auto;
-			#designers {
-				max-height: 690px;
-				.designer-section {
-					width: 100%;
-					height: 80px;
-					overflow: hidden;
-					.designer-container {
-						.designer-range {
-							top: 30px;
-							right: 20px;
-							left: auto;
-						}
-						.designer-panel {
-							top: 80px;
-						}
+	}
+	#designers-a-z {
+		max-width: 524px;
+		margin: 0 auto;
+		#designers {
+			max-height: 690px;
+			.designer-section {
+				width: 100%;
+				height: 80px;
+				overflow: hidden;
+				.designer-container {
+					.designer-range {
+						top: 30px;
+						right: 20px;
+						left: auto;
+					}
+					.designer-panel {
+						top: 80px;
 					}
 				}
 			}

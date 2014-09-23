@@ -18,3 +18,20 @@
 		}
 	}
 }
+
+#bpn-upload-form {
+	.form-item {
+		margin: 0;
+	}
+	.field-type-list-text {
+		margin: 0;
+	}
+	fieldset.collapsible .fieldset-legend {
+		margin: 0;
+	}
+	.field-name-field-supporting-images {
+		.fieldset-description {
+			display: none;
+		}
+	}
+}

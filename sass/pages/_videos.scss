@@ -1,0 +1,115 @@
+/**
+ *Styling for videos page
+ */
+/*
+* Caption styles
+*/
+.video-list {
+}
+
+body.page-videos {
+	.view-video-page {
+		.video-list {
+			font-size: 0;
+			.with-caption {
+				cursor: pointer;
+				position: relative;
+				border: 3px solid #EEE;
+				@media only screen and (max-width:1024px) {
+					border: none;
+					text-align: center;
+					img {
+						border: 3px solid #EEE;
+					}
+				}
+				.img-title {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					margin: 0;
+					width: 100%;
+					text-align: center;
+					background: rgba(0,0,0,0);
+					color: rgba(0,0,0,0);
+					transition: all 0.5s ease;
+					@media only screen and (max-width:1024px) {
+						position: relative;
+						background: none;
+						color: #000;
+					}
+					//For title display
+					.video-title {
+						text-align: center;
+						width: 100%;
+						padding: 0;
+						font-family: $open-sans;
+						font-size: 22px;
+						position: absolute;
+						top: 30%;
+						text-align: center;
+						p {
+							margin:  0;
+						}
+						a {
+							color: rgba(255,255,255,0);
+							&:hover {
+								color: $bg-pink;
+							}
+						}
+						@media only screen and (max-width:1024px) {
+							position: relative;
+							top: 0;
+							font-size: 16px;
+							a {
+								color: #000;
+								font-weight: normal;
+							}
+						}	
+					}
+				}
+			}
+			.with-caption:hover {
+				.img-title {
+					background: rgba(0,0,0,.8);
+					color: rgba(255,255,255,1);
+					a {
+						color: rgba(255,255,255,1);
+					}
+					@media only screen and (max-width:1024px) {
+						background: none;
+						color: #000;
+						a {
+							color: #000;
+						}
+					}
+				}	
+			}
+			.views-row {
+				display: inline-block;
+				vertical-align: top;
+				width: 31%;
+				padding: 1%;
+				figcaption {
+					font-size: 22px;
+				}
+				@media only screen and (max-width:600px){
+					width: 100%;
+					display: block;
+					padding: 0;
+					margin: 0 0 20px 0;
+					figure {
+						img {
+							border: none;
+						}
+					}
+					.video-title {
+					}
+				}
+			}
+		}
+	}
+	.fancybox-skin {
+		padding: 0;
+	}
+}

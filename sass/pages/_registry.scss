@@ -1,0 +1,25 @@
+/*
+ *Rules for registry channel landing page and Bridal Best page
+ */
+body.registry-landing {
+	#bb-search-block {
+		position: relative;
+		background: url('/sites/all/themes/custom/bg_zen/images/bb-bg.jpg') no-repeat;
+		#bb-search-brand {
+			position: absolute;
+			top: 30%;
+			left: 5%;
+			.form-container {
+				border: 2px solid #FFF;
+				padding: 10px;
+				.views-exposed-form {
+					#edit-tableware-wrapper {
+						display: none;
+					}
+				}
+			}
+			.read-more {
+			}
+		}
+	}
+}

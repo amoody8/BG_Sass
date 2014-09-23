@@ -1,11 +1,11 @@
 (function ($, Drupal, window, document, undefined) {
 Drupal.behaviors.bg_ig_behavior = {
   attach: function(context, settings) {
-		$('body.page-photos-get-inspired-inspiration-gallery', context).append("<div id='gown-pop'></div>");
+		$('body.page-photos-get-inspired-inspiration-gallery', context).append("<div id='ig-pop'></div>");
 		$('.ig-page .view-content', context).on('click', ".views-row:not('.ad') img", function(e){
 			data = "<div class='pop-img'><a href='" + $(this).attr('target') + "'><img src='" + $(this).attr('src') + "' /></a></div><p class='ig-pop-title'><a href='" + $(this).attr('target') + "'>" + $(this).attr('title') + "</a></p>";
-			$('#gown-pop').html(data);
-			$.fancybox( $("#gown-pop"), {
+			$('#ig-pop').html(data);
+			$.fancybox( $("#ig-pop"), {
 				padding: 0,
 				margin: 15,
 				helpers:  {
