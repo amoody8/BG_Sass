@@ -157,9 +157,9 @@ body.bridal-gowns .fancybox-inner {
 	}
 	.name {
 		font-family: $open-sans;
-		font-size: $h1-font-size;
-		font-weight: bold;
-		margin: 0 0 -5px 0;
+		font-size: 26px;
+		font-weight: 400;
+		margin: 0 0 10px 0;
 	}
 	.price-title {
 		border-top: 2px solid #ccc;
@@ -208,11 +208,15 @@ body.bridal-gowns .fancybox-inner {
 		height: 100%;
 		.details {
 			margin: 0 0 20px 0;
+			li {
+				font-weight:400;
+			}
 		}	
 		.info-header {
 			color: $bg-pink;
 			font-family: $open-sans;
 			font-size: $h3-font-size;
+			font-weight:700;
 			margin: 0;
 		}
 		.gown-gray {
