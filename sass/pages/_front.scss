@@ -26,7 +26,10 @@ body.front {
 	}
 	.hp-slider {
 		.bx-wrapper {
+<<<<<<< HEAD
 			margin:0 auto;
+=======
+>>>>>>> jj-updates
 			.bx-viewport {
 				overflow: visible !important;
 				li {
@@ -177,12 +180,15 @@ body.front {
 			}
 			.views-list {
 				.latest-list {
+<<<<<<< HEAD
 					.views-row{
 						margin:0;
 						@media all and (max-width: 767px) {
 							margin:0 0 10px;
 						}
 					}
+=======
+>>>>>>> jj-updates
 				}
 				.item-list {
 					.pager {
@@ -317,7 +323,7 @@ body.front {
 				margin: 10px 0 0 0;
 				font-family: $arapey-italic;
 				font-style: italic;
-				font-size: 40px;
+				font-size: 51px;
 			}
 			.first-article {
 				position: relative;
@@ -332,14 +338,19 @@ body.front {
 				.caption {
 					@include shaded-title;
 					.title {
+<<<<<<< HEAD
 						padding: 2% 2% 0;
 						a {
 							font-size:30px;
 							line-height:32px;
 						}
+=======
+						padding: 0 1%;
+						font-size: 28px;
+>>>>>>> jj-updates
 					}
 					.subtitle {
-						padding: 0 2% 2%;
+						padding: 0 1%;
 						color: #FFF;
 						font-size: 14px;
 					}
@@ -361,7 +372,7 @@ body.front {
 					.caption {
 						.title {
 							font-size: 20px;
-							padding: 3% 2% 0;
+							padding: 0 1%;
 							font-family: $arapey-italic;
 							font-style: italic;
 							a {
@@ -387,7 +398,7 @@ body.front {
 					color:#f49ac1;
 					background:#fff;
 					padding-left: 10px;
-					font-size:12px;
+					font-size:18px;
 				}
 			}
 		}

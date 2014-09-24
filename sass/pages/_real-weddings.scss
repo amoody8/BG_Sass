@@ -213,6 +213,9 @@ body.page-photos-get-inspired-real-weddings {
 	}
 	#masonry-container {
 		margin: 0 auto;
+		div.new {
+			display: none;
+		}
 	}
 	.views-row {
 		width: 24%;
@@ -303,7 +306,7 @@ body.page-photos-get-inspired-real-weddings {
 		margin: 0 20px;
 		#main-image {
 			width: 90%;
-			max-width: 600px;
+			max-width: 700px;
 			margin: 0 auto 20px auto;
 			position: relative;
 			img {
@@ -345,7 +348,7 @@ body.page-photos-get-inspired-real-weddings {
 		}
 		#caption {
 			width: 80%;
-			max-width: 500px;
+			max-width: 600px;
 			padding: 1%;
 			margin: 0 auto;
 			@include border-radius(15px);
