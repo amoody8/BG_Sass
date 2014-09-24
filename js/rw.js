@@ -33,7 +33,7 @@ Drupal.behaviors.bg_rw_behavior = {
 				);
 				$('#main-image', context).on('click', '#supporting img', function(e){
 					var sup_rel = $(this).attr('rel');
-					var main_src = $('#main-image #rw-imag').attr('src');
+					var main_src = $('#main-image #rw-image').attr('src');
 					var main_rel = $('#main-image #rw-image').attr('rel');
 					var sup_src = $(this).attr('src');
 
@@ -63,6 +63,7 @@ Drupal.behaviors.bg_rw_behavior = {
 				var newstuff = $(data.out);
 				$('#masonry-container').append(newstuff);
 				$container.imagesLoaded( function(){
+					$('#masonry-container div.new').removeClass('new');
 					$container.masonry( 'appended', newstuff );
 				});	
 				if (data.last) {

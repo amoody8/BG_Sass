@@ -52,6 +52,7 @@ body.honeymoons-landing {
 							text-shadow: 0 2px 5px rgba(0,0,0,.75);
 						a {
 							font-size: 36px;
+							line-height:34px;
 							font-weight: bold;
 						}
 					}
@@ -407,7 +408,7 @@ body.page-vendors-details {
 		background-color: $gray-background;
 	}
 	.attribution {
-		background: url("../images/titlebg.png") repeat-x bottom left;
+		//background: url("../images/titlebg.png") repeat-x bottom left;
 		text-align: right;
 		padding: 10px 0 8px 0;
 	}

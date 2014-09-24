@@ -44,11 +44,11 @@ $next_link = bg_potd_get_nav($node->nid, 'next');
 			</div>
 		</div>
 		<div class='info'>
-			<?php if (!empty($node->field_photo_credit['und'][0]['value'])):?>
-				<div class='photo-credit'><span>Photo credit: </span><?php print $node->field_photo_credit['und'][0]['value']; ?></div>
+			<?php if (!empty($node->field_photo_credit['und'])):?>
+				<div class='photo-credit'><span>Photo Credit: </span><?php print $node->field_photo_credit['und'][0]['value']; ?></div>
 			<?php endif;?>
-			<?php if (!empty($node->field_why_we_love_it['und'][0]['value'])):?>
-				<div class='why-title'><span>Why We Love it</span></div>
+			<?php if (!empty($node->field_why_we_love_it['und'])):?>
+				<div class='why-title'><span>Why We Love It</span></div>
 				<div class='why'><?php print $node->field_why_we_love_it['und'][0]['value']; ?></div>
 			<?php endif;?>
 		</div>

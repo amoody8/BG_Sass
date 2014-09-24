@@ -7,6 +7,8 @@ $nodes = $more_nodes = array();
 foreach ($first_nid_set as $nid) {
   $nodes[] = node_load($nid);
 }
+$total = count($nids);
+//dd($total, "Total");
 //print image_style_url('rw-main', $nodes[2]->field_images['und'][0]['uri'])
 //$ad_nodes = _simpleads_load_ads(3063, 1);
 //$ad =  "<div class='ad'>" . _simpleads_render_ajax_template($ad_nodes, 3063, 1) . "</div>";
@@ -188,9 +190,11 @@ $rw_search = drupal_render(_block_get_renderable_array(_block_render_blocks(arra
           </div>  
         </div>    
       <?php endif; ?>
+      <?php if ($total > 9):?>
         <div id="load-more" class='show' data-start='10' data-tid='<?php print $term->tid; ?>'>
           <span>See More Photos</span>
         </div>
+      <?php endif;?> 
     </div>
 
 

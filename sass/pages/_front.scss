@@ -343,6 +343,7 @@ body.front {
 						padding: 0 2% 2%;
 						color: #FFF;
 						font-size: 14px;
+						display:none;
 					}
 				}
 			}
@@ -355,11 +356,28 @@ body.front {
 					padding: 0;
 					height: 50%;
 					margin: 0 0 5% 0;
+					@media all and (max-width:600px){
+						padding:0 0 5%;
+						border-bottom:1px solid rgba(0,0,0,.15);
+					}
 					.image-small {
+						@media all and (max-width:600px){
+						width: 45%;
+						display: inline-block;
+						vertical-align: middle;
+						margin-right:3%;
+						}
 						img {
 						}
 					}
 					.caption {
+						width:auto;
+						display:block;
+						@media all and (max-width:600px){
+							width:50%;
+							display:inline-block;
+							vertical-align:middle;
+							}
 						.title {
 							font-size: 20px;
 							padding: 3% 2% 0;
@@ -372,6 +390,7 @@ body.front {
 				}
 				.item-small.last {
 					padding: 0;
+					border:transparent;
 				}
 			}
 			.channel-block-view-all {

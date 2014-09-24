@@ -224,3 +224,13 @@ a {
 		color: $bg-pink;
 	}
 }
+article {
+	a {
+		text-decoration: none;
+		color: $bg-pink;
+		&:hover {
+			color: #000;
+		}
+	}
+}
+

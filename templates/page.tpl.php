@@ -9,14 +9,14 @@
 ?>
 
 <div id="page">
+    <div id='top-banner'><?php print render($page['top_banner']) ?></div>
 
   <header class="header" id="upper-header" role="banner">
     <div class='upper-header-container'>
     <?php print render($page['upper_header']); ?>
     </div>
   </header>
-
-  
+ 
   <header class="header" id="header" role="banner">
 
     <?php if ($secondary_menu): ?>
@@ -34,7 +34,7 @@
         )); ?>
       </nav>
     <?php endif; ?>
-
+ 
     <?php if ($logo): ?>
       <div class='header-logo'><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
@@ -54,7 +54,6 @@
     </div>
   </div>
   <div id="main">
-
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>

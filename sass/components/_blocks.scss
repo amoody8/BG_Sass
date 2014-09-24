@@ -128,6 +128,10 @@
 			vertical-align: top;
 			width: 300px;
 		}
+		@media all and (max-width: 1024px) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 }
 
@@ -455,7 +459,7 @@
 			.items {
 				.item {
 					display: inline-block;
-					width: 32%;
+					width: 31%;
 					margin: 0 4px 8px 4px;
 					position: relative;
 					text-align: center;
@@ -550,7 +554,7 @@
 				vertical-align: top;
 				position: relative;
 				margin: 0 1% 10px 1%;
-				width: 48%;
+				width: 47%;
 				min-width: 250px;
 				max-width: 400px;
 				.views-field-field-images {
@@ -558,6 +562,10 @@
 				}
 				.views-field-title {
 					@include shaded-title;
+				}
+				@media all and (max-width: 767px) {
+					width: 100%;
+					max-width: 100%;
 				}
 			}
 		}
@@ -1171,6 +1179,9 @@ body.page-vendors {
 						color: #000;
 						font-size: 14px;
 						line-height: 1.25;
+						@media all and (max-width: 767px) {
+							display: none;
+						}
 					}
 				}
 			}

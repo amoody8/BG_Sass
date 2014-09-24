@@ -353,9 +353,10 @@ body.page-photos-get-inspired-real-weddings {
 			margin: 0 auto;
 			@include border-radius(15px);
 			background-color: #FFF;
-			font-family: $open-sans-italic;
-			font-style: italic;
+			font-family: $open-sans;
+			font-style: normal;
 			font-size: 16px;
+			line-height:22px;
 		}
 		p {
 			margin: 0;

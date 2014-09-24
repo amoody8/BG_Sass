@@ -37,10 +37,13 @@
 			<div class='slideshow-body'>
 				<?php print $node->body['und'][0]['value']; ?>
 			</div>
+			<?php if ($share_links) {
+				//print $share_links;  
+			 }
+			 ?>
 			<div class='author'>
 				<span>By: <?php print $by; ?></span>
 				<?php
-				print bg_article_share($node->nid); 
 				if (user_access('administer nodes')) {
 					print "<div class='admin-edit'><a href='/taxonomy/term/" . $slideshow_tid . "/order' target='_blank'>Order Images</a>&nbsp;&nbsp;&nbsp;<a id='edit-image' href='' target='_blank'>Edit Image</a></div>";
 				}?>	

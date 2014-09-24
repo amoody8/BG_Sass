@@ -51,9 +51,10 @@
 			//$('body:not(.bridal-gowns, .front) #content img').each(
 			$('article img').each(
         function(index){
-					if (((($(this).width() >= 400 && $(this).height() > 200) || $(this).height() >= 400)  && ($(this).css('float') != 'left' && $(this).css('float') != 'right')) || $(this).hasClass('slide-image')) {
+					if ((($(this).width() >= 400 || $(this).height() >= 400)  && ($(this).css('float') != 'left' && $(this).css('float') != 'right'))) {
  					  var here = location.href;
             var src = $(this).attr('src');
+						console.log(src, "Source");
             if (src.indexOf('http:') == -1) {
               src = "http://www.bridalguide.com" + src;
             }
@@ -138,10 +139,10 @@
 				pager: false,
 				moveSlides: 1
 			});
-			$('body.honeymoons-landing #switcher-target').load('ajax/get-honeymoons-content?pane=travel-tips');
+			//$('body.honeymoons-landing #switcher-target').load('ajax/get-honeymoons-content?pane=travel-tips');
 			$('body.honeymoons-landing #honeymoons-switcher .slider-wrapper .slides .slide').click(function(){
 				var target = $(this).find('a').eq(0).attr('href');
-				$('body.honeymoons-landing #switcher-target').load('ajax/get-honeymoons-content?pane=' + target);
+				$('body.honeymoons-landing #switcher-target').load('/ajax/get-honeymoons-content?pane=' + target);
 				return false;
 			});
 
@@ -235,10 +236,10 @@
 				return false;
 			});
 			
-			$('body.planning-landing #switcher-target').load('ajax/get-planning-content?pane=getting-started');
+			//$('body.planning-landing #switcher-target').load('ajax/get-planning-content?pane=getting-started');
 			$('body.planning-landing #planning-ops li a').click(function(){
 				var target = $(this).attr('href');
-				$('body.planning-landing #switcher-target').load('ajax/get-planning-content?pane=' + target);
+				$('body.planning-landing #switcher-target').load('/ajax/get-planning-content?pane=' + target);
 				return false;
 			});
     }
