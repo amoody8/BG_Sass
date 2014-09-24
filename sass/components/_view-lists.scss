@@ -4,7 +4,6 @@
 .views-list {
 	.views-row {
 		padding: 20px;
-		border-bottom: 1px dotted #000;
 		.list-image {
 			width: 28%;
 			margin: 0 2% 0 0;
@@ -28,9 +27,9 @@
 	font-size: 0;
 	li {
 		position: relative;
-		padding: 0 0 10px 0;
-		margin: 0 0 10px 0;
-		border-bottom: 1px dotted #333;
+		padding: 0 0 20px 0;
+		margin: 0 0 20px 0;
+		border-bottom: 1px solid rgba(0,0,0,.15);
 		.list-image {
 			width: 30%;
 			margin: 0 5% 0 0;
@@ -48,8 +47,14 @@
 				width: 100%;
 			}
 			.title {
-				font-size: 24px;
-				margin: 0 0 10px 0;
+				font-size: 30px;
+				line-height:34px;
+				font-style:italic;
+				margin: 0 0 15px 0;
+				@media screen and (max-width:600px) {
+					font-size: 20px;
+					line-height:24px;
+				}	
 			}
 			.subtitle {
 				font-size: 14px;
