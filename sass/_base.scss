@@ -5,12 +5,18 @@
 .upper-header-container {
 	max-width: $body-width;
 	margin: 0 auto;
+    @media all and (max-width:1199px){
+        max-width:970px;
+    }
 }
 
 #main {
 	padding: 0;
 	max-width: $body-width;
 	margin: 0 auto 30px auto;
+    
+    @media all and (max-width:1199px){
+        max-width:970px;
 }
 
 #main #content,
