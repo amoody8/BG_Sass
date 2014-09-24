@@ -10,7 +10,7 @@
 		font-size: 0;
 		li.potd-item, li.totd-item {
 			display: inline-block;
-			width: 29.3333%;
+			width: 29%;
 			padding: 1%;
 			margin: 1%;
 			vertical-align: top;
@@ -108,7 +108,7 @@
 article.node-potd, article.node-totd {
 	margin: 0;
 	p {
-		margin: 1.5em 0;
+		margin: .75em 0;
 	}
 	.body {
 		max-width: 620px;
